@@ -11,38 +11,32 @@
 
         <header>Laboratorio 1 - Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</header>
 	
-		<h1>Sobre mí</h1>
-		
-		<p>Mi nombre es Eva Roggenhofer, soy de Alemania. Recién llegué a Querétaro por mi semestre de intercambio.
-			Con respecto a la construcción de software tengo conocimientos básicos de los lenguajes python, php, html y css.
-			Tengo experiencia en gestión de proyectos de implementación de software. En mi tiempo libre hago deporte (natación, correr)
-			y veo series o películas. Me gustan los idiomas y explorar nuevos países (como México).
-			En este curso me gustaría profundizar mis conocimientos básicos que ya tengo en el área de construcción de software.
-			Espero que pueda contribuir a un trabajo en equipo armonioso y productivo.</p>
+        <nav>
+            <a href="sobre_mí.html">Sobre mí</a>
+        </nav>
 
-            <img src="profile_picture.jpg" alt="profile_picture">
 
 		<h1>Preguntas a responder</h1>
 		
 		<p><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
 		<p>El internet es una red que habilita la comunicación y acceso a recursos de datos. Se usan ciertos protocolos de comunicación.
-			El world wide web es una gran cantidad de documentos interconectados (p.ej. por hyperlinks).</p>
+			El world wide web es una gran cantidad de documentos interconectados (p.ej. por hyperlinks).
+            En otras palabras: el Internet es el medio; el World Wide Web está en el internet.</p>
 		<a href="https://www.geeksforgeeks.org/difference-between-internet-and-www/">fuente</a>
 
-		Lalo: internet = el medio; el www esta en el internet?
+		
 		
 
 		<p><strong>¿Cuáles son las partes de un URL?</strong></p>
-		<p>esquema (http(s)), prefix (www), dominio (w3schools.com), port (port nr for http es 80), path/directorio? (path at the server), filename (nombre del archivo)</p>
-		<a href="https://www.w3schools.com/html/html_urlencode.asp">fuente</a>
+		<p>esquema (protocolo de comunicación; cifrado con "s" o no cifrado) (http(s)), prefix (www), dominio (w3schools.com: dirección de la computadora con la que estamos comunicando), port (port nr for http es 80), path (directorio en el servidor), filename (nombre del archivo);</p>
+		<p>Un URL puede tener variables: ...html?variable=valor... (p.j. en una búsqueda de Google)</p>
+        <a href="https://www.w3schools.com/html/html_urlencode.asp">fuente</a>
 
-		Lalo: https: protocolo de comunicacion; cifrado (s) o no; dominio: direccion de la computadora con la que estamos comunicando;
-		url puede tener variables: ....html?variable=valor... (z.B. bei einer Googlesuche)
 
 		<p><strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></p>
-		<p>GET se utiliza para solicitar datos de un recurso especificado del sevidor. lo usa cuando buscamos algo en el navegador. GET: solo tiene head, no body
+		<p>GET se utiliza para solicitar datos de un recurso especificado del sevidor. Se usa cuando buscamos algo en el navegador. GET: solo tiene head, no body
 			POST se utiliza para enviar datos a un servidor para crear/actualizar un recurso. POST si tiene body (= cifrado en https). formas: con POST.
-			HEAD (Lalo: kein Kommentar dazu) es casi idéntico a GET, pero sin el cuerpo de la respuesta. Si GET /users devuelve una lista de usuarios, entonces HEAD /users hará la misma petición pero no devolverá la lista de usuarios. Las peticiones HEAD son útiles para comprobar lo que devolverá una petición GET antes de hacer realmente una petición GET - como antes de descargar un archivo grande o un cuerpo de respuesta.
+			HEAD es casi idéntico a GET, pero sin el cuerpo de la respuesta. Si GET /users devuelve una lista de usuarios, entonces HEAD /users hará la misma petición pero no devolverá la lista de usuarios. Las peticiones HEAD son útiles para comprobar lo que devolverá una petición GET antes de hacer realmente una petición GET - como antes de descargar un archivo grande o un cuerpo de respuesta.
 			PUT se utiliza para enviar datos a un servidor para crear/actualizar un recurso. La diferencia entre POST y PUT es que las peticiones PUT son idempotentes. Es decir, llamar a la misma solicitud PUT varias veces siempre producirá el mismo resultado. Por el contrario, llamar a una petición POST repetidamente tiene efectos secundarios de crear el mismo recurso varias veces.
 			El método PATCH se utiliza para aplicar modificaciones parciales a un recurso.
 			El método DELETE elimina el recurso especificado.
@@ -67,7 +61,7 @@
 		<p><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></p>
 		<p>El error 404 significa "not found". La página solicitada no pudo ser encontrada.</p>
 		<a href="https://www.w3schools.com/tags/ref_httpmessages.asp">fuente</a>
-		<p>Puede ser que se ha cambiado el nombre del archivo solicidado o el archivo ha sido movido o eliminado. es responsabilidad del cliente! todos los 40....</p>
+		<p>Puede ser que se ha cambiado el nombre del archivo solicidado o el archivo ha sido movido o eliminado. Es responsabilidad del cliente! (Como todos los 40...)</p>
 		<a href="https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/troubleshoot-404-file-not-found-error">source</a>
 
 
@@ -100,18 +94,17 @@
 		
 		<p><strong>Sobre el ciclo de vida y desarrollo de los sistemas de información:</strong></p>
 		<p>¿Cuál es el ciclo de vida de los sistemas de información?</p>
-		<p>planeación, analisis, diseno, implementacion, mantenimiento, jubilación</p>
+		<p>planeación, analisis, diseño, implementacion, mantenimiento, jubilación</p>
 		<a href="https://www.geeksforgeeks.org/software-engineering-information-system-life-cycle/">fuente</a>
 
 
 		<p><strong>¿Cuál es el ciclo de desarrollo de sistemas de información?</strong></p>
-		<p>diseno, desarrollo, implementación</p>
+		<p>diseño, desarrollo, implementación</p>
 		<a href="https://keepcoding.io/blog/ciclo-de-vida-del-desarrollo-del-sistema/">fuente</a>"
 
-		<footer>Eva Roggenhofer A01762592@tec.mx</footer>
+		<footer>https://code.visualstudio.com/</footer>
 	
 	</body>
-
 
 
 </html>
