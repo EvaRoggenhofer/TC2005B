@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<title>Laboratorio 1</title>
+		<meta charset = utf-8>
+	</head>
+
+
+	<body>
+	
+		<h1>Sobre mí</h1>
+		
+		<p>Mi nombre es Eva Roggenhofer, soy de Alemania. Recién llegué a Querétaro por mi semestre de intercambio.
+			Con respecto a la construcción de software tengo conocimientos básicos de los lenguajes python, php, html y css.
+			Tengo experiencia en gestión de proyectos de implementación de software. En mi tiempo libre hago deporte (natación, correr)
+			y veo series o películas. Me gustan los idiomas y explorar nuevos países (como México).
+			En este curso me gustaría profundizar mis conocimientos básicos que ya tengo en el área de construcción de software.
+			Espero que pueda contribuir a un trabajo en equipo armonioso y productivo.</p>
+
+		<h1>Preguntas</h1>
+		
+		<p><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
+		<p>El internet es una red que habilita la comunicación y acceso a recursos de datos. Se usan ciertos protocolos de comunicación.
+			El world wide web es una gran cantidad de documentos interconectados (p.ej. por hyperlinks).</p>
+		<a href="https://www.geeksforgeeks.org/difference-between-internet-and-www/">source</a>
+
+		Lalo: internet = el medio; el www esta en el internet?
+		
+
+		<p>¿Cuáles son las partes de un URL?</p>
+		<p>esquema (http(s)), prefix (www), dominio (w3schools.com), port (port nr for http es 80), path/directorio? (path at the server), filename (nombre del archivo)</p>
+		<a href="https://www.w3schools.com/html/html_urlencode.asp">source</a>
+
+		Lalo: https: protocolo de comunicacion; cifrado (s) o no; dominio: direccion de la computadora con la que estamos comunicando;
+		url puede tener variables: ....html?variable=valor... (z.B. bei einer Googlesuche)
+
+		<p>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</p>
+		<p>GET se utiliza para solicitar datos de un recurso especificado del sevidor. lo usa cuando buscamos algo en el navegador. GET: solo tiene head, no body
+			POST se utiliza para enviar datos a un servidor para crear/actualizar un recurso. POST si tiene body (= cifrado en https). formas: con POST.
+			HEAD (Lalo: kein Kommentar dazu) es casi idéntico a GET, pero sin el cuerpo de la respuesta. Si GET /users devuelve una lista de usuarios, entonces HEAD /users hará la misma petición pero no devolverá la lista de usuarios. Las peticiones HEAD son útiles para comprobar lo que devolverá una petición GET antes de hacer realmente una petición GET - como antes de descargar un archivo grande o un cuerpo de respuesta.
+			PUT se utiliza para enviar datos a un servidor para crear/actualizar un recurso. La diferencia entre POST y PUT es que las peticiones PUT son idempotentes. Es decir, llamar a la misma solicitud PUT varias veces siempre producirá el mismo resultado. Por el contrario, llamar a una petición POST repetidamente tiene efectos secundarios de crear el mismo recurso varias veces.
+			El método PATCH se utiliza para aplicar modificaciones parciales a un recurso.
+			El método DELETE elimina el recurso especificado.
+		</p>
+		<a href="https://www.w3schools.com/tags/ref_httpmethods.asp">source</a>
+
+
+		<p>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</p>
+		<p>POST, porque es más seguro en comparación con GET, porque los datos no están expuestos en el URL.</p>
+		<a href="https://www.geeksforgeeks.org/difference-between-http-get-and-post-methods/">source</a>
+
+
+		<p>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</p>
+		<p>El método GET.</p>
+		<a href="https://www.w3schools.com/tags/ref_httpmethods.asp">source</a>
+
+		<p>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</p>
+		<p>Quiere decir "OK". Es la respuesta estándar para una solicitud (request) HTTP exitosa.</p>
+		<a href="https://www.w3schools.com/tags/ref_httpmessages.asp">source</a>
+
+
+		<p>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</p>
+		<p>El error 404 significa "not found". La página solicitada no pudo ser encontrada.</p>
+		<a href="https://www.w3schools.com/tags/ref_httpmessages.asp">source</a>
+		<p>Puede ser que se ha cambiado el nombre del archivo solicidado o el archivo ha sido movido o eliminado. es responsabilidad del cliente! todos los 40....</p>
+		<a href="https://learn.microsoft.com/en-us/troubleshoot/developer/webapps/iis/health-diagnostic-performance/troubleshoot-404-file-not-found-error">source</a>
+
+
+		<p>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</p>
+		<p>Error 500 indica un error interno del servidor. Es un mensaje muy genérico cuando ningún otro mensaje más especifico corresponde con el problema. Entonces el desarrollador lo tiene que arreglar.</p>
+		<a href="https://www.w3schools.com/tags/ref_httpmessages.asp">source</a>
+
+
+		<p>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</p>
+		<p>Quere decir que mientras todavía se puede usar, pero ya no es la mejor opción y es recomendable usar otra alternativa.</p>
+		<p>en vez de usar "font", se utiliza css; en vez de usar "big", se utiliza css; center -> text-align</p>
+		<a href="https://www.w3docs.com/learn-html/deprecated-html-tags.html">source</a>
+
+
+		<p>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</p>
+		<p>html5 tiene muchas nuevas etiquetas en comparación con html4. html5 admite videos y audios. JavaScript corre en html5.
+		En html5 la declaración del doctype es mucho más corta (igual que la declaración de la codificación de caracteres:meta charset...)</p>
+		<a href="https://www.javatpoint.com/html-vs-html5#:~:text=HTML5%20is%20more%20complete%20and,of%20the%20World%20Wide%20Web.">source</a>
+
+
+		<p>¿Cuáles son los principales controles de una forma HTML5?</p>
+		<p>text input controls, checkboxes controls, radio box controls, select box controls, file select boxes, hidden controls,
+			clickable buttons, submit and reset button</p>
+		<a href="https://www.tutorialspoint.com/html/html_forms.htm">source</a>
+
+
+		<p>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)</p>
+		<p>Microsoft Edge obtiene 476 de 555 puntos.</p>
+
+		
+		<p>Sobre el ciclo de vida y desarrollo de los sistemas de información:</p>
+		<p>¿Cuál es el ciclo de vida de los sistemas de información?</p>
+		<p>planeación, analisis, diseno, implementacion, mantenimiento, jubilación</p>
+		<a href="https://www.geeksforgeeks.org/software-engineering-information-system-life-cycle/">source</a>
+
+
+		<p>¿Cuál es el ciclo de desarrollo de sistemas de información?</p>
+		<p>diseno, desarrollo, implementación</p>
+		<a href="https://keepcoding.io/blog/ciclo-de-vida-del-desarrollo-del-sistema/">source</a>"
+
+		<p>FOOTER???</p>
+	
+	</body>
+
+
+
+</html>
