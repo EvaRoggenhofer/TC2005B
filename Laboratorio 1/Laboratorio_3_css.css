@@ -1,0 +1,52 @@
+
+body {
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Courier", sans-serif;
+    line-height: 1.5;
+    padding: 6em 1em;
+    color: #555;
+}
+
+
+h1,
+h2,
+strong {
+    color: #ef6204;
+}
+
+
+h1 {
+    color: #ef6204;
+}
+
+
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+
+footer {
+    font-style: italic;
+}
+
+
+.name {
+    text-decoration: underline;
+}
+
+
+#footer_preguntas {
+    color: orangered;
+}
+
+
+#footer_preguntas:hover {
+    color: yellow;
+}
+
+
+a {
+    color: #ef6204;
+}
