@@ -1,0 +1,36 @@
+h1 {
+    color: black;
+}
+
+
+td {
+    color: darkcyan;
+}
+
+.favorito {
+    text-emphasis: filled red;
+}
+
+
+
+#Oppenheimer {
+    color: orange;
+}
+
+
+
+#Oppenheimer:hover {
+    color: yellow;
+}
+
+
+
+body {
+
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Helvetica", "Arial", sans-serif;
+
+}
+
+
