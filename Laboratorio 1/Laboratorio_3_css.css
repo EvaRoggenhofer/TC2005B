@@ -1,7 +1,7 @@
 
 body {
     margin: 0 auto;
-    max-width: 50em;
+    max-width: 60em;
     font-family: "Courier", sans-serif;
     line-height: 1.5;
     padding: 6em 1em;
@@ -36,17 +36,26 @@ footer {
     text-decoration: underline;
 }
 
+.subject {
+    text-decoration: underline;
+}
+
 
 #footer_preguntas {
     color: orangered;
 }
 
 
-#footer_preguntas:hover {
-    color: yellow;
+#footer_página:hover {
+    color: orangered;
 }
 
 
 a {
     color: #ef6204;
+}
+
+
+*  { 
+    color: rgb(65, 39, 3);
 }

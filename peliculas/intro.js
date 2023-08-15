@@ -173,6 +173,69 @@ ejercicio_1()
 
 
 
+document.getElementById("favorita").onkeyup = () => {
+    console.log("Tecla presionada");                   // -> in der Konsole wird jetzt jeder Klick registriert
+   
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+    document.getElementById("favorita").style.color = `rgb(${red}, ${green}, ${blue}`;
+}
+
+// arreglo de objetos; aparece la sinopsis cuando haces clic en una imagen:
+
+const peliculas = [
+
+    {
+        nombre: "Titanic",
+        imagen: "https://i.etsystatic.com/27725708/r/il/3989d8/2912524873/il_fullxfull.2912524873_6vc1.jpg",
+        sinopsis: "Historia de amor entre Jack y Rose"
+    },
+    {
+        nombre: "Oppenheimer",
+        imagen: "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
+        sinopsis: "Historia de la bomba atómica"
+    },
+
+    {
+        nombre: "Barbie",
+        imagen: "https://www.instyle.com/thmb/vZCEkHB1nBMIes2tcKTUAMP0zf0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BarbiePosterEmbed-de7c886812184414977730e920d77a65.jpg",
+        sinopsis: "La muneca más famose de la historia"
+    },
+
+    {
+        nombre: "Las Tortugas Ninja",
+        imagen: "https://mir-s3-cdn-cf.behance.net/project_modules/hd/5d830b134127975.61ce89a78d10c.jpg",
+        sinopsis: "Las aventuras flipantes de las torgutas verdes en Nueva York"
+    }
+];
+
+
+
+
+function genera_posters() {                 // en vez de tener los posters en html estatico, aqui se generan de manera dinamica:
+
+   let html = `<div class="columns">`;
+
+    for(let pelicula of peliculas) {
+        html += `<div class="column">
+        <figure class="image">
+             <img class="is-rounded" src="${pelicula.imagen}">
+        </figure>
+        </div>;`
+        
+    }
+
+   
+    html += `</div>`;
+    return html;
+}
+
+
+document.getElementById("posters").innerHTML = genera_posters();
+
+
+
 
 
 

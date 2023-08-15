@@ -4,7 +4,7 @@
 	<head>
 		<title>Laboratorio 1</title>
 		<meta charset = utf-8>
-		<link rel="stylesheet" href="Laboratorio_3_css.css"> <!-- hoja de estilo (externa) -->
+		<link rel="stylesheet" href="Laboratorio_3_css_mini.css"> <!-- hoja de estilo (externa) -->
 
 		<style>
 			body {
@@ -24,7 +24,8 @@
         </nav>
 
 
-		<h1 style="color:rgb(242, 27, 7)">Preguntas a responder</h1>  <!-- estilo en línea -->
+		<h1>Preguntas a responder</h1>
+		<h2 class="subject">Tema: html</h2>
         <img src="images/HTML5_logo.png" alt="HTML5_logo" width="100" height="90">
 		
 		<p><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
@@ -111,7 +112,26 @@
 		<p>diseño, desarrollo, implementación</p>
 		<a href="https://keepcoding.io/blog/ciclo-de-vida-del-desarrollo-del-sistema/">fuente</a>"
 
-		<footer id="footer_preguntas">Editor: Visual Studio Code https://code.visualstudio.com/</footer>
+		<h2 class="subject">Tema: preguntas laboratorio 3</h2>
+
+		<dl>
+			<dt>Como ingeniero de software ¿cuál es tu recomendación sobre el uso de !important en un CSS?</dt>
+			<dd>- Usar !important en CSS lo considero una mala práctica. Anula todos los demás estilos, independientemente de su especificidad.</dd>
+			<dd><a href="https://element.how/why-you-should-avoid-using-important-in-css/#table-of-content-1">fuente</a></dd>
+			<dt>Si se pone una imagen de fondo en una página HTML, ¿por qué debe escogerse con cuidado?</dt>
+			<dd>- El contenido del sitio web debe seguir siendo legible a pesar de la imagen de fondo. Aparte de eso, las imágenes de fondo deben ser relevantes para el tema del sitio web</dd>
+			<dd><a href="https://element.how/why-you-should-avoid-using-important-in-css/#table-of-content-1">fuente</a></dd>
+			<dt>Como ingeniero de software, ¿cuál es tu recomendación al elegir las unidades de un propiedad de estilo entre %, px y pt?</dt>
+			<dd>- Unidades físicas como pt sólo deben utilizarse para las hojas de estilo de impresión. Los píxeles px sólo deben utilizarse para la pantalla. Las unidades relativas como % se adaptan bien tanto a los tipos de medios de pantalla como de impresión y deberían ser las unidades CSS más utilizadas.</dd>
+			<dd><a href="https://gist.github.com/basham/2175a16ab7c60ce8e001">fuente</a></dd>
+			<dt>¿Por qué el uso de una versión minimizada del CSS mejora el rendimiento del sitio?</dt>
+			<dd>- Minimizar un CSS: eliminación del código innecesario de los archivos fuente CSS para reducir su tamaño (sin cambiar el funcionamiento del archivo CSS en el navegador). Esto ayuda al navegador a descargar y procesar estos archivos más rápidamente, lo que aumenta el rendimiento de la página (y, por tanto, también la experiencia del usuario).</dd>
+			<dd><a href="https://blog.hubspot.com/website/minify-css#:~:text=By%20stripping%20unnecessary%20data%20from,performance%20and%20improving%20user%20experience.">fuente</a></dd>
+		  </dl>
+
+
+
+		<footer id="footer_página">Editor: Visual Studio Code https://code.visualstudio.com/</footer>
 	
 	</body>
 
