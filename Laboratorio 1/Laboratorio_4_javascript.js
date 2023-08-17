@@ -127,17 +127,76 @@ function start_ejercicio_3(){
 // prompt ejercicio 4
 
 function start_ejercicio_4(){
-    const numero_ejercicio_4 = prompt("Entra un arreglo de números");
-    alert (numero_ejercicio_4);
+    const arreglo_ejercicio_4_1 = prompt("1/3 Introduce una lista de 3 elementos separados por comas y sin espacios:");
+    alert (arreglo_ejercicio_4_1);
+
+    const arreglo_ejercicio_4_2 = prompt("2/3 Introduce una lista de 3 elementos separados por comas y sin espacios:");
+    alert (arreglo_ejercicio_4_2);
+
+    const arreglo_ejercicio_4_3 = prompt("3/3 Introduce una lista de 3 elementos separados por comas y sin espacios:");
+    alert (arreglo_ejercicio_4_3);
+
+
+
+    const arreglo_ejercicio_4_1_split = arreglo_ejercicio_4_1.split(",");
+    const arreglo_ejercicio_4_2_split = arreglo_ejercicio_4_2.split(",");
+    const arreglo_ejercicio_4_3_split = arreglo_ejercicio_4_3.split(",");
+
+
+    const arreglo_ejercicio_4_completo = [
+
+        [arreglo_ejercicio_4_1_split],
+        [arreglo_ejercicio_4_2_split],
+        [arreglo_ejercicio_4_3_split]
+    ];
+
+        console.log(arreglo_ejercicio_4_completo)
+
+
+
+
+    // renglon = row
+    function calculateAverages(arreglo_ejercicio_4_completo) {
+        const averages = [];
+      
+        for (let i = 0; i < arreglo_ejercicio_4_completo.length; i++) {
+          const subArray = arreglo_ejercicio_4_completo[i].map(parseFloat); // Convertir: strings -> numbers: https://stackoverflow.com/questions/16158986/array-map-and-parseint-woes
+          const subArraySum = subArray.reduce((acc, num) => acc + num, 0);              // https://www.leighhalliday.com/reduce-javascript
+          const subArrayAverage = subArraySum / subArray.length;
+          averages.push(subArrayAverage);
+        }
+      
+        return averages;
+      }
+      
+      const subArrayAverages = calculateAverages(arreglo_ejercicio_4_completo);
+      console.log(subArrayAverages);
+
+      console.log(typeof arreglo_ejercicio_4_completo[1][1]);      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof?retiredLocale=de
+  
+
+
+
+
 }
+
+
+
+
+
 
 
 // prompt ejercicio 5
 
-function start_ejercicio_5(){
+function start_ejercicio_5() {
     const numero_ejercicio_5 = prompt("Entra un número con múltiples dígitos");
-    alert (numero_ejercicio_5);
+    alert(numero_ejercicio_5);
+
+    const reversedNum = numero_ejercicio_5 => parseFloat(numero_ejercicio_5.toString().split('').reverse().join('')) * Math.sign(numero_ejercicio_5);   // https://www.freecodecamp.org/news/js-basics-how-to-reverse-a-number-9aefc20afa8d/
+    const result = reversedNum(numero_ejercicio_5);
+    console.log(result);
 }
+
 
 
 // prompt ejercicio 6
@@ -146,3 +205,10 @@ function start_ejercicio_6(){
     const numero_ejercicio_6 = prompt("SOLUCIÓN PROPIA");
     alert (numero_ejercicio_6);
 }
+
+
+
+
+
+// TESTING!! siehe oben
+// PREGUNTAS A RESPONDER
