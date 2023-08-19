@@ -5,7 +5,7 @@ const filesystem = require('fs');                        // require imoprts una 
 
 // writeFileSync es un metodo que sirve para escribir en un archivo de manera sincrona.
 // por default, los metodos de node son asincronos.
-filesystem.writeFileSync('hola.txt', 'Hola desde node'); // sync: synchron; onhe sync: es blockiert (ich hole prof kaffee, er kann nichts machen, während ich weg bin)
+filesystem.writeFileSync('hola.txt', 'Holaaaaaa desde node'); // sync: synchron; onhe sync: es blockiert (ich hole prof kaffee, er kann nichts machen, während ich weg bin)
 
 console.log("Ya acabé de escribir el archivo");
 
@@ -25,7 +25,7 @@ for (let item of arreglo) {
     }, item);
 }
 
-// dann zum Ausführen:      node .\app.js      in Terminal unten eingeben
+// dann zum Ausführen:      node .\Laboratorio_8_backend.js      in Terminal unten eingeben
 
 
 
@@ -41,7 +41,7 @@ const server = http.createServer( (request, response) => {
         response.setHeader('Content-Type', 'text/html'); // "yo te voy a enviar texto en forma de html"
        
         //response.write("hola desde node!");
-        response.write(`<!doctype html><html><h1>ddd</h1></html>`); // ahora codigo javascript o css no se van a ejecutar; solo html (css extern Bulma si)
+        response.write(`<!doctype html><html><h1>Holaaaaa</h1></html>`); // ahora codigo javascript o css no se van a ejecutar; solo html (css extern Bulma si)
 
         response.end();     // response tiene un metodo "end" -> envia la respuesta
 });
