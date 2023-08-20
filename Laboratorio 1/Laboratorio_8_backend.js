@@ -1,3 +1,5 @@
+// Laboratorio_8_backend.js
+
 console.log("hola desde node!");
 
 // fs es el modulo de filesystem de node, que sirve para acceder a los metodos para manipular el sistema de archivos
@@ -5,7 +7,7 @@ const filesystem = require('fs');                        // require imoprts una 
 
 // writeFileSync es un metodo que sirve para escribir en un archivo de manera sincrona.
 // por default, los metodos de node son asincronos.
-filesystem.writeFileSync('hola.txt', 'Holaaaaaa desde node'); // sync: synchron; onhe sync: es blockiert (ich hole prof kaffee, er kann nichts machen, während ich weg bin)
+filesystem.writeFileSync('Laboratorio_8_hola.txt', 'Holaaaaaa desde node'); // sync: synchron; onhe sync: es blockiert (ich hole prof kaffee, er kann nichts machen, während ich weg bin)
 
 console.log("Ya acabé de escribir el archivo");
 
@@ -65,9 +67,6 @@ const server = http.createServer( (request, response) => {
 
         <header>Laboratorio 1 - Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</header>
 
-        <nav>
-            <button type="button"><a href="preguntas_a_responder.html">Preguntas a responder</a></button>
-        </nav>
 	
 		<h1>Sobre mí</h1>
         <h2 class="name">Eva Roggenhofer - A01762592@tec.mx</h2>
@@ -79,8 +78,6 @@ const server = http.createServer( (request, response) => {
 			En este curso me gustaría profundizar mis conocimientos básicos que ya tengo en el área de construcción de software.
 			Espero que pueda contribuir a un trabajo en equipo armonioso y productivo.</p>
 
-            <img src="images/profile_picture.jpeg" alt="profile_picture" width="332" height="424">
-            <img src="images/nuernberg_weissgerbergasse.png" alt="nuremberg_weissgerbergasse" width="600" height="424">
 
 
 		<footer id="footer_página">Editor: Visual Studio Code https://code.visualstudio.com/</footer>
