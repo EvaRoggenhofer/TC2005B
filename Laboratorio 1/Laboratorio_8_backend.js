@@ -41,12 +41,66 @@ const server = http.createServer( (request, response) => {
         response.setHeader('Content-Type', 'text/html'); // "yo te voy a enviar texto en forma de html"
        
         //response.write("hola desde node!");
-        response.write(`<!doctype html><html><h1>Holaaaaa</h1></html>`); // ahora codigo javascript o css no se van a ejecutar; solo html (css extern Bulma si)
+        response.write(`<!doctype html>
+        
+        
+        <!doctype html>
+<html>
+	
+	<head>
+		<title>Laboratorio 1</title>
+		<meta charset = utf-8>
+		<link rel="stylesheet" href="Laboratorio_3_css_mini.css"> <!-- hoja de estilo -->
+
+		<style>
+			body {
+			  background-color: linen;
+			}
+		</style> <!-- estilo de documento -->
+
+	</head>
+
+
+	<body>
+
+        <header>Laboratorio 1 - Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</header>
+
+        <nav>
+            <button type="button"><a href="preguntas_a_responder.html">Preguntas a responder</a></button>
+        </nav>
+	
+		<h1>Sobre mí</h1>
+        <h2 class="name">Eva Roggenhofer - A01762592@tec.mx</h2>
+		
+		<p>Mi nombre es Eva Roggenhofer, soy de Alemania. Recién llegué a Querétaro por mi semestre de intercambio. Normalmente vivo en Núremberg.
+			Con respecto a la construcción de software tengo conocimientos básicos de los lenguajes python, php, html y css.
+			Tengo experiencia en gestión de proyectos de implementación de software. En mi tiempo libre hago deporte (natación, correr)
+			y veo series o películas. Me gustan los idiomas y explorar nuevos países (como México).
+			En este curso me gustaría profundizar mis conocimientos básicos que ya tengo en el área de construcción de software.
+			Espero que pueda contribuir a un trabajo en equipo armonioso y productivo.</p>
+
+            <img src="images/profile_picture.jpeg" alt="profile_picture" width="332" height="424">
+            <img src="images/nuernberg_weissgerbergasse.png" alt="nuremberg_weissgerbergasse" width="600" height="424">
+
+
+		<footer id="footer_página">Editor: Visual Studio Code https://code.visualstudio.com/</footer>
+	
+	</body>
+
+
+
+</html>
+        
+        
+        
+        
+        `); // ahora codigo javascript o css no se van a ejecutar; solo html (css extern Bulma si)
 
         response.end();     // response tiene un metodo "end" -> envia la respuesta
 });
 
-server.listen(3000); // el puerto (3000): dirección dentro de una compu... (compu = edificio; porto: sala dentro del edificio); todas las compus tienen una direccion de autodiagnostico/un home: https://127.0.0.1 o: https://localhost:3000
+server.listen(3000); // el puerto (3000): dirección dentro de una compu... (compu = edificio; porto: sala dentro del edificio);
+// todas las compus tienen una direccion de autodiagnostico/un home: https://127.0.0.1 o: https://localhost:3000
 // porto con numero mayor a 1000: estan desocupados normalmente
 // en el navegador: localhost:3000/salida=hercules -> en el terminal aparece "salida=hercules"
 //favicon.ico: navegador -> inspeccionar -> console
