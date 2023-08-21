@@ -30,6 +30,7 @@ const http = require('http');
 
 const server = http.createServer( (request, response) => {    
     console.log(request.url);
+    console.log(request.method);
 
     if (request.url == "/") {
 
@@ -121,7 +122,7 @@ const server = http.createServer( (request, response) => {
 
         response.end();
 
-    } else if(request.url == "/new") {
+    } else if(request.url == "/new" && request.method == "GET") {
         
         response.write(`
         <!DOCTYPE html>
@@ -152,6 +153,15 @@ const server = http.createServer( (request, response) => {
                 <section class="section">
                     <div class="container">
                         <h1 class="title">Registro de películas</h1>
+                        <form action="/new" method="POST">
+                            <label for="nombre">Nombre de la película</label>
+                            <input id="nombre" name="nombre" class="input" type="text" placeholder="Oppenheimer">
+                            <br><br>
+                            <label for="sinapsis">Sinapsis de la película</label>
+                            <textarea id="sinapsis" name="sinapsis" class="textarea" placeholder="La historia de la bomba atómica"></textarea>
+                            <br>
+                            <input id="registrar" name="registrar" type="submit" value="Registrar" class="button is-info">
+                        </form>
                     </div>
                 </section>
             </main>
@@ -159,6 +169,18 @@ const server = http.createServer( (request, response) => {
             </html>
         `);
 
+        response.end();
+
+    } else if(request.url == "/new" && request.method == "POST") { 
+        
+        const datos = [];
+
+        request.on('data', (dato) => {
+            console.log(dato);
+            //datos.push(dato);
+        });
+
+        response.write(`La película fue registrada`);
         response.end();
 
     } else {
@@ -205,12 +227,6 @@ const server = http.createServer( (request, response) => {
 
 
     /*
-    const datos = [];
-
-    request.on('data', (dato) => {
-        console.log(dato);
-        datos.push(dato);
-    });
 
     return request.on('end', () => {
         const datos_completos = Buffer.concat(datos).toString();
