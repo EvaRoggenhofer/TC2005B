@@ -40,6 +40,11 @@ const http = require('http');
 // Objeto server; ...es gibt 2 parameter: request und response
 const server = http.createServer( (request, response) => {
         console.log(request.url);
+
+
+		//Lab10
+		if(request.url == "/") {
+
         response.setHeader('Content-Type', 'text/html'); // "yo te voy a enviar texto en forma de html"
        
         //response.write("hola desde node!");
@@ -94,7 +99,12 @@ const server = http.createServer( (request, response) => {
         `); // ahora codigo javascript o css no se van a ejecutar; solo html (css extern Bulma si)
 
         response.end();     // response tiene un metodo "end" -> envia la respuesta
-});
+}
+
+//Lab10
+else {response.statusCode = 404;
+		response.end();				// para que devuelve la respuesta; z.B. localhost:3000/peliculas
+}
 
 server.listen(3000); // el puerto (3000): dirección dentro de una compu... (compu = edificio; porto: sala dentro del edificio);
 // todas las compus tienen una direccion de autodiagnostico/un home: https://127.0.0.1 o: https://localhost:3000
