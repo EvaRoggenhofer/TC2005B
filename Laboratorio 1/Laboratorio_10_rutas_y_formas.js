@@ -1,4 +1,4 @@
-// Laboratorio 10 rutas y formas
+// Laboratorio 10 rutas y formas; documentos necesarios: package.json
 
 console.log("hola desde node!");
 
@@ -106,8 +106,21 @@ const server = http.createServer( (request, response) => {
 
         request.on('data', (dato) => {
             console.log(dato);
-            //datos.push(dato);
-        });
+            datos.push(dato);
+    });
+
+
+    // NEW:
+    return request.on('end', () => {
+        const datos_completos = Buffer.concat(datos).toString();
+        console.log(datos_completos);
+        const nuevo_dato = datos_completos.split('=')[1];
+        return response.end();
+    });
+ 
+
+
+    
 
         response.write(`
         
@@ -131,7 +144,7 @@ const server = http.createServer( (request, response) => {
                         <p>Tu comentario fue registrado</p><br><br>
 
                         <a href="/comentario">nuevo comentario</a><br>
-                        <a href="/">pagina feis</a>
+                        <a href="/">pagina facebook</a>
                     </div>
                 </section>
             </main>
